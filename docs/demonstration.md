@@ -15,7 +15,7 @@ Open the file in an editor and enter your email address in the element `A06/Emai
         "ZipCode": "10115",
         "City": "Berlin",
         "Country": "DE",
-        "Email": "<Enter your email address here!>"
+        "Email": "[Enter your email address here!]"
     }
 Save the file.
 
