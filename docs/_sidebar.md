@@ -2,8 +2,6 @@
   - [Use Case](use_case.md)
 
 - Quick Start
-  - [Notarization](notarization.md)
-  - [Verification](verification.md)
   - [Demonstration](demonstration.md)
 
 - EN 10168 Certificates
@@ -12,9 +10,9 @@
   - [JSON Definitions](json_definitions.md)
   - [Implementation](implementation.md)
 
-- API Documentation
-  - [Notarization](api_notarization.md)
-  - [Verification](api_verification.md)
+- Documentation
+  - [Notarization](notarization.md)
+  - [Verification](verification.md)
 
 - [Deployment](deployment.md)
 
