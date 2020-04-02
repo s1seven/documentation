@@ -27,7 +27,30 @@ Drag and drop the file into the "Drag & Drop" section.
 
 Wait until the processing is completed and success is reported as illustrated.
 
-Result [Screenshot]
+The screen will be updated with a success message:
+
+>example.json is a valid certificate!</br>
+>It has been notarized **here**</br>
+>And the generated PDF has been notarized **here**
+
+In case the uploaded JSON document is not valid certificate - it does not comply to the structures defined by a JSON Schema - only the hash of the document is calculated and put on the blockchain. 
+
+      "asset": {
+        "data": {
+          "notarization": "SBS Notarized:c84f10d82e8b19c2f552035106f99df4b9ea3caec63933b737fe9185c7a1b6da"
+        }
+      }
+
+Clicking on the **here** link for the PDF opens the transaction. In the element `asset` the hash of the PDF can be found in the entry `notarization`. Furthermore, the link to notarization of the JSON is stored in `jsonLink`.
+
+     "asset": {
+        "data": {
+          "jsonLink": "https://test.ipdb.io/api/v1/transactions/015c651968e7ee1b7e49f0b8309ee800b48783c72f4920d3c2ba5416a805cc08",
+          "notarization": "SBS Notarized:872fee239f29f6decf5b1912b8171f0d07e828b6a58a5ac249a34e865bb62611"
+        }
+      }
+
+This documents that the input for the PDF is the linked JSON document.
 
 ## Step 4: Receive the certificate
 
@@ -45,7 +68,36 @@ Upload the JSON document.
 
 <iframe width="100%" height="400" src="https://test.verification.en10204.io"/></iframe>
 
-Result [Screenshot]
+After 
+
+
+
+
+>✅ SteelFactory_SteelTrader_0334-2019-ZZS_1.json is verified</br>
+>Creator: 6MXbQupMW6Vxy95b6DrVYB17bBudJTXG2KyT7Q3gk8iS</br>
+>Timestamp: 4/2/2020, 6:20:16 AM</br>
+>**See transaction**
+
+      "asset": {
+        "data": {
+          "notarization": "SBS Notarized:c84f10d82e8b19c2f552035106f99df4b9ea3caec63933b737fe9185c7a1b6da"
+        }
+      }
 
 Repeat with the PDF document.
-Result [Screenshot]
+
+>✅ SteelFactory_SteelTrader_0334-2019-ZZS_1.pdf is verified</br>
+>Creator: 6MXbQupMW6Vxy95b6DrVYB17bBudJTXG2KyT7Q3gk8iS</br>
+>Timestamp: 4/2/2020, 6:29:15 AM</br>
+>**See transaction**
+
+     "asset": {
+        "data": {
+          "jsonLink": "https://test.ipdb.io/api/v1/transactions/015c651968e7ee1b7e49f0b8309ee800b48783c72f4920d3c2ba5416a805cc08",
+          "notarization": "SBS Notarized:872fee239f29f6decf5b1912b8171f0d07e828b6a58a5ac249a34e865bb62611"
+        }
+      }
+
+In case the JSON or PDF has been tampered the hash calculated by the Verification Service will not be found resulting in the message:
+
+>❌ SteelFactory_SteelTrader_0334-2019-ZZS_1.PDF is not verified
