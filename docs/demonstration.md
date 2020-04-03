@@ -1,6 +1,7 @@
 # Demonstration
 
-This is a step by step guide to go through the full process of creating a certificate document as JSON file, notarize it on the blockchain and verify the integrity of both delivered documents, the raw JSON file and the 
+This is a step by step guide to go through the full process of creating a certificate document as JSON file, notarize it on the blockchain and verify the integrity of both delivered documents, the raw JSON file and the certificate as PDF document.
+
 ## Step 1: Download sample JSON file
 
 Download the file [example.json](/_json/example.json ':ignore title :target=_blank').
@@ -51,6 +52,9 @@ Clicking on the **here** link for the PDF opens the transaction. In the element 
       }
 
 This documents that the input for the PDF is the linked JSON document.
+
+### Note
+The demo system for notarization is not requiring any authentication nor keys to make things simple. For test and liver systems public private key pairs will be required, see section [Deployment](/deployment).
 
 ## Step 4: Receive the certificate
 
