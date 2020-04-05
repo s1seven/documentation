@@ -24,7 +24,7 @@ Save the file.
 
 Drag and drop the file into the "Drag & Drop" section.
 
-<iframe width="100%" height="400" src="https://test.notarization.en10204.io"/></iframe>
+<iframe width="100%" height="400" src="https://demo.notarization.en10204.io"/></iframe>
 
 Wait until the processing is completed and success is reported as illustrated.
 
@@ -70,7 +70,7 @@ Download both the JSON and PDF document to your computer.
 
 Upload the JSON document.
 
-<iframe width="100%" height="400" src="https://test.verification.en10204.io"/></iframe>
+<iframe width="100%" height="400" src="https://demo.verification.en10204.io"/></iframe>
 
 After 
 
