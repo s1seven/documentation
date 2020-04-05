@@ -1,5 +1,5 @@
 # Verification Application
-
+<!--
 <div id="swagger-ui"></div>
 
 <script>
@@ -26,3 +26,5 @@
         layout: "StandaloneLayout"
     })
 </script>
+-->
+<iframe width="100%" height="900" src="https://demo.notarization.en10204.io/api/docs/"/></iframe>
