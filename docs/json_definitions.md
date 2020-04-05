@@ -1,5 +1,44 @@
 # JSON Definitions
 
+
+## Product
+
+    "B02": {
+      "description": "Steel name or number and additional symbols and the product specification for the steel.",
+      "type": "object",
+      "properties": {
+        "ProductNorm": {
+          "description": "The product norm designation",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "MaterialNorm": {
+          "description": "The material norm(s)",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "MassNorm": {
+          "description": "The mass norm(s)",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "SteelDesignation": {
+          "description": "The steel designation(s)",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+
+
 ## Company
 
 ### Definition of company in JSON Schema
