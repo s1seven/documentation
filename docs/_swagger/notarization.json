@@ -1,0 +1,107 @@
+{
+  "openapi" : "3.0.0",
+  "info" : {
+    "version" : "1.0.1",
+    "title" : "Steel But Smart Notarization Service",
+    "description" : "This is SBS Notarization API. It provides a useful way of notarizing files on BigchainDB blockchain."
+  },
+  "paths" : {
+    "/notarize/{fileHash}" : {
+      "post" : {
+        "summary" : "Notarize SHA256 hash of the file on BigchainDB",
+        "tags" : [ "notarize" ],
+        "parameters" : [ {
+          "in" : "path",
+          "name" : "fileHash",
+          "required" : true,
+          "description" : "SHA256 hash of the file to be authorized.",
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "operationId" : "notarize",
+        "responses" : {
+          "201" : {
+            "description" : "Transaction result with link",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "object",
+                  "properties" : {
+                    "link" : {
+                      "type" : "string",
+                      "description" : "URL address of the notarization transaction"
+                    },
+                    "transaction" : {
+                      "type" : "object",
+                      "description" : "Transaction output"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/certificate" : {
+      "post" : {
+        "summary" : "Notarize SHA256 hash of the certificate on BigchainDB, generate certificate PDF and send confirmation email",
+        "tags" : [ "certificate" ],
+        "operationId" : "certificate",
+        "responses" : {
+          "201" : {
+            "description" : "Transaction result with links to notarized certificate and PDF",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "object",
+                  "properties" : {
+                    "jsonLink" : {
+                      "type" : "string",
+                      "description" : "URL address of the notarization transaction of the upload JSON file"
+                    },
+                    "pdfLink" : {
+                      "type" : "string",
+                      "description" : "URL address of the notarization transaction of the generated PDF"
+                    }
+                  },
+                  "required" : [ "jsonLink", "pdfLink" ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody" : {
+          "content" : {
+            "multipart/form-data" : {
+              "schema" : {
+                "type" : "object",
+                "properties" : {
+                  "certificate" : {
+                    "description" : "The certificate JSON.",
+                    "type" : "string",
+                    "format" : "binary"
+                  }
+                },
+                "required" : [ "certificate" ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "externalDocs" : {
+    "description" : "Verification API Docs",
+    "url" : "https://demo.notarization.en10204.io/api/docs"
+  },
+  "tags" : [ {
+    "name" : "notarize"
+  }, {
+    "name" : "certificate"
+  } ],
+  "servers" : [ {
+    "url" : "https://demo.notarization.en10204.io/api"
+  } ]
+}
