@@ -13,5 +13,5 @@ If you find any weaknesses in our work we are very happy to learn about them. Pl
 
 ## Contribute 
 
-One more approach to support our efforts and improve our work is rather technical: fork the repository https://github.com/s1seven/en10204.io, create a new branch, add, delete or modify things and submit a pull request.
+One more approach to support our efforts and improve our work is rather technical: fork the repository https://github.com/s1seven/en10204.io, create a new branch, add, delete or modify things and submit a pull request. 
 
