@@ -1,5 +1,5 @@
 - Introduction
-  - [Use Case](use_case.md)
+  - [Mill Certificates](mill_certificates.md)
 
 - Quick Start
   - [Demonstration](demonstration.md)
@@ -8,7 +8,7 @@
   - [Design Approach](design_approach.md)
   - [JSON Schema](json_schema.md)
   - [JSON Definitions](json_definitions.md)
-  - [Implementation](implementation.md)
+  - [Implementation Guide](implementation_guide.md)
 
 - Documentation
   - [Notarization](notarization.md)

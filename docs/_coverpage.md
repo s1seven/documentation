@@ -9,6 +9,6 @@
 - Lightweight
 - Customizable
 
-[Get Started](use_case)
+[Get Started](mill_certificates)
 
 ![color](#FFFFFF)
