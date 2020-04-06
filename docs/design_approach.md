@@ -2,7 +2,7 @@
 
 ## Background
 
-The European Standard [EN 10168](https://www.en-standard.eu/bs-en-10168-2004-steel-products-inspection-documents-list-of-information-and-description/) defines five information  groups to document the results of steel product inspection. For each information group 99 or 100 fields are defined with a very basic naming convention - letter for the section and 2 digit number.
+The European Standard [EN 10168](https://www.en-standard.eu/bs-en-10168-2004-steel-products-inspection-documents-list-of-information-and-description/) defines five information groups to document the results of steel product inspection. For each information group 99 or 100 fields are defined with a very basic naming convention - letter for the section and 2 digit number.
 
 | Information Group | Fields| 
 |---|---|
@@ -25,7 +25,7 @@ To illustrate the designation of sections (or fields in our understanding) some 
 | C11 | Yield or proof strength | Yield or proof strength recorded in MPa.|
 | C93 to C99 | Supplementary information | Available for supplementary information on the chemical composition. |
 
-## Study Objectives
+## Research
 
 We have been studying certificates created by many market participants viewing them from the view point of machines - how is data provided for easy and high quality processing.
 
