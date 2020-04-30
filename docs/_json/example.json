@@ -17,7 +17,7 @@
         "ZipCode": "10115",
         "City": "Berlin",
         "Country": "DE",
-        "Email": "<Enter your email address here!>"
+        "Email": "[Enter your email address here!]"
       },
       "A07": "0334/2019/ZZS",
       "A08": "958722",
@@ -25,120 +25,95 @@
       "A10": "1",
       "SupplementaryInformation": {
         "A11": {
-          "Key": "Consignment Bill Number",
-          "Value": "1583836"
+          "key": "Lieferschein Nummer",
+          "value": "1583836"
         }
       }
     },
     "ProductDescription": {
       "B01": "Hohlprofil",
-      "B02": {
-        "SteelDesignation":["S275J2H"],
-        "ProductNorm": ["EN10219-1:2006"]
-      },
-      "B03": "EN 10219 Part 1+2 /--/",
-      "B04": "unstained",
+      "B02": "S275J2H EN10219-1:2006",
+      "B03": "Ausführung lt. EN 10219 Teil 1+2 /--/",
+      "B04": "ungebeizt",
       "B06": "VHP200/150X 6,00",
       "B07": "7282841",
-      "B08": 192000.0,
-      "B09": 12000.0,
-      "B13": 5739.0
+      "B08": 192000,
+      "B09": 12000,
+      "B13": 5739
     },
     "Inspections": [
       {
         "Inspection": {
-          "SupplementaryInformation": {
-            "C04": {
-              "Key": "B07",
-              "Value": "175508"
-            }
-          },
+          "C00": "175508",
           "ChemicalComposition": {
             "C71": {
-              "Actual": 0.0015,
-              "Symbol": "C"
+              "Actual": 0.0015
             },
             "C72": {
-              "Actual": 0.00005,
-              "Symbol": "C"
+              "Actual": 0.00005
             },
             "C73": {
-              "Actual": 0.01,
-              "Symbol": "C"
+              "Actual": 0.01
             },
             "C74": {
-              "Actual": 0.00014,
-              "Symbol": "C"
+              "Actual": 0.00014
             },
             "C75": {
-              "Actual": 0.00007,
-              "Symbol": "C"
+              "Actual": 0.00007
             },
             "C76": {
-              "Actual": 0.00041,
-              "Symbol": "C"
+              "Actual": 0.00041
             },
             "C77": {
-              "Actual": 0.0002,
-              "Symbol": "C"
+              "Actual": 0.0002
             },
             "C78": {
-              "Actual": 0.00009,
-              "Symbol": "C"
+              "Actual": 0.00009
             },
             "C79": {
-              "Actual": 0.00002,
-              "Symbol": "C"
+              "Actual": 0.00002
             },
             "C80": {
-              "Actual": 0.0001,
-              "Symbol": "C"
+              "Actual": 0.0001
             },
             "C81": {
-              "Actual": 0.00002,
-              "Symbol": "C"
+              "Actual": 0.00002
             },
             "C82": {
-              "Actual": 0.00001,
-              "Symbol": "C"
+              "Actual": 0.00001
             },
             "C83": {
-              "Actual": 0.00001,
-              "Symbol": "C"
+              "Actual": 0.00001
             },
             "C85": {
-              "Actual": 0.000047,
-              "Symbol": "C"
+              "Actual": 0.000047
             },
             "C86": {
-              "Actual": 0.0000001,
-              "Symbol": "C"
+              "Actual": 1e-7
             },
-            "C92": {
-              "Actual": 0.003227,
-              "Symbol": "CEV"
+            "SupplementaryInformation": {
+              "C93": {
+                "key": "CEV",
+                "value": "0,3227",
+                "unit": "%"
+              }
             }
           }
         }
       },
       {
         "Inspection": {
+          "C00": "1607219/0001_20181023_1529",
           "C02": "0001 längs",
           "C03": "-20 Celsius",
-          "SupplementaryInformation": {
-            "C04": {
-              "Key": "B07",
-              "Value": "1607219/0001_20181023_1529"
-            }
-          },
           "TensileTest": {
             "C11": "377",
             "C12": "456",
             "C13": "29,7",
             "SupplementaryInformation": {
               "C14": {
-                "Key": "Re/Rm",
-                "Value": "0,83"
+                "key": "Re/Rm",
+                "value": "0,83"
               }
             }
           },
@@ -164,19 +139,16 @@
       },
       {
         "Inspection": {
+          "C00": "0001660342",
           "OtherTests": {
-            "OtherMechanicalTests": {
+            "SupplementaryInformation": {
+              "D02": {
+                "key": "Schweissnahtprüfung",
+                "value": "100 % Wirbelstrom geprüft"
+              },
               "D51": {
-                "Key": "Querfaltversuch",
-                "Value": "entspricht"
-              },
-              "D52": {
-                "Key": "Schweissnahtprüfung",
-                "Value": "100 % Wirbelstrom geprüft"
-              },
-              "D99": {
-                "Key": "B07",
-                "Value": "0001660342"
+                "key": "Querfaltversuch",
+                "value": "entspricht"
               }
             }
           }
@@ -186,7 +158,7 @@
     "Validation": {
       "Z01": "Compliance declaration",
       "Z02": "2019-05-30T09:30:10-01:00",
-      "Z03": "Mr. Steel  Inspector +4373",
+      "Z03": "Mr. Steel Auditor",
       "Z04": "CE 0180 18 0180-CPD-72103"
     }
   }
