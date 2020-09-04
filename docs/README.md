@@ -2,7 +2,7 @@
 
 ## About
 
-This project implements the site [en10204.io](https://en10204.io) is built on https://docsify.js.org/. 
+This project implements the site [en10204.io](https://en10204.io) and is built on https://docsify.js.org/. 
 
 ## Contribute
 
