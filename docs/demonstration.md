@@ -6,7 +6,7 @@ This is a step by step guide to go through the full process of creating a certif
 
 Download the file [example.json](/_json/example.json ':ignore title :target=_blank').
 
-## Step 2: Edit sample JSON file
+## Step 2: Edit the receiver email address in JSON file
 
 Open the file in an editor and enter your email address in the element `A06/Email`:
 
@@ -18,9 +18,18 @@ Open the file in an editor and enter your email address in the element `A06/Emai
         "Country": "DE",
         "Email": "[Enter your email address here!]"
     }
+
+## Step 3: Update the value for the CO2 footprint of the product
+
+    "B98": {
+        "Key": "CO2 Footprint in kg CO2e/kg",
+        "Value": "1.71",
+        "Type": "number"
+    }
+
 Save the file.
 
-## Step 3: Notarize the sample JSON file
+## Step 4: Notarize the sample JSON file
 
 Drag and drop the file into the "Drag & Drop" section.
 
@@ -32,31 +41,18 @@ The screen will be updated with a success message:
 
 >example.json is a valid certificate!</br>
 >It has been notarized **here**</br>
->And the generated PDF has been notarized **here**
 
-In case the uploaded JSON document is not valid certificate - it does not comply to the structures defined by a JSON Schema - only the hash of the document is calculated and put on the blockchain. 
+Clicking on the **here** link to the transaction on the Blockchain. In the element `asset` the hashes of the JSON and the generated PDF can be found included a characterization of the document type.
 
-      "asset": {
-        "data": {
-          "notarization": "SBS Notarized:c84f10d82e8b19c2f552035106f99df4b9ea3caec63933b737fe9185c7a1b6da"
-        }
+    "asset": {
+      "data": {
+        "pdfHash": "e27244bbed86e055a478a44151e9d9576dfc8969eeff5bc6c34819e9e6686847",
+        "certificateType": "en10168-schemas",
+        "jsonHash": "e3db9cfa7fd8bdc13ba66e13ee92c97c7be0460faabae3087d3d57e38b24d07c"
       }
+    }
 
-Clicking on the **here** link for the PDF opens the transaction. In the element `asset` the hash of the PDF can be found in the entry `notarization`. Furthermore, the link to notarization of the JSON is stored in `jsonLink`.
-
-     "asset": {
-        "data": {
-          "jsonLink": "https://test.ipdb.io/api/v1/transactions/015c651968e7ee1b7e49f0b8309ee800b48783c72f4920d3c2ba5416a805cc08",
-          "notarization": "SBS Notarized:872fee239f29f6decf5b1912b8171f0d07e828b6a58a5ac249a34e865bb62611"
-        }
-      }
-
-This documents that the input for the PDF is the linked JSON document.
-
-### Note
-The demo system for notarization is not requiring any authentication nor keys to make things simple. For test and liver systems public private key pairs will be required, see section [Deployment](/deployment).
-
-## Step 4: Receive the certificate
+## Step 5: Receive the certificate
 
 A view seconds after the successful notarization of the both the JSON and PDF certificate document you should receive an email with:
 
@@ -66,27 +62,26 @@ A view seconds after the successful notarization of the both the JSON and PDF ce
 
 Download both the JSON and PDF document to your computer. 
 
-## Step 5: Verify the JSON and PDF document
+## Step 6: Verify the JSON and PDF document
 
 Upload the JSON document.
 
 <iframe width="100%" height="500" src="https://demo.verification.en10204.io"/></iframe>
 
-After 
-
-
-
+After the upload the hash of the document is calculated and a query with the hash is sent to the Blockchain. If the hash can be found the message is:
 
 >✅ SteelFactory_SteelTrader_0334-2019-ZZS_1.json is verified</br>
 >Creator: 6MXbQupMW6Vxy95b6DrVYB17bBudJTXG2KyT7Q3gk8iS</br>
 >Timestamp: 4/2/2020, 6:20:16 AM</br>
 >**See transaction**
 
-      "asset": {
-        "data": {
-          "notarization": "SBS Notarized:c84f10d82e8b19c2f552035106f99df4b9ea3caec63933b737fe9185c7a1b6da"
-        }
+    "asset": {
+      "data": {
+        "pdfHash": "e27244bbed86e055a478a44151e9d9576dfc8969eeff5bc6c34819e9e6686847",
+        "certificateType": "en10168-schemas",
+        "jsonHash": "e3db9cfa7fd8bdc13ba66e13ee92c97c7be0460faabae3087d3d57e38b24d07c"
       }
+    }
 
 Repeat with the PDF document.
 
@@ -95,12 +90,13 @@ Repeat with the PDF document.
 >Timestamp: 4/2/2020, 6:29:15 AM</br>
 >**See transaction**
 
-     "asset": {
-        "data": {
-          "jsonLink": "https://test.ipdb.io/api/v1/transactions/015c651968e7ee1b7e49f0b8309ee800b48783c72f4920d3c2ba5416a805cc08",
-          "notarization": "SBS Notarized:872fee239f29f6decf5b1912b8171f0d07e828b6a58a5ac249a34e865bb62611"
-        }
+    "asset": {
+      "data": {
+        "pdfHash": "e27244bbed86e055a478a44151e9d9576dfc8969eeff5bc6c34819e9e6686847",
+        "certificateType": "en10168-schemas",
+        "jsonHash": "e3db9cfa7fd8bdc13ba66e13ee92c97c7be0460faabae3087d3d57e38b24d07c"
       }
+    }
 
 In case the JSON or PDF has been tampered the hash calculated by the Verification Service will not be found resulting in the message:
 
