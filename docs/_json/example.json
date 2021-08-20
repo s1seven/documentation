@@ -85,6 +85,11 @@
         "Unit": "kg"
       },
       "SupplementaryInformation": {
+        "B98": {
+          "Key": "CO2 Footprint in kg CO2e/kg",
+          "Value": "1.71",
+          "Type": "number"
+        },
         "B99": {
           "Key": "B99",
           "Value": "1607219/0001_20181023_1529",
