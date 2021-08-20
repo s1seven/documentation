@@ -4,7 +4,7 @@
 
 The European Standard [EN 10168](https://www.en-standard.eu/bs-en-10168-2004-steel-products-inspection-documents-list-of-information-and-description/) defines five information groups to document the results of steel product inspection. For each information group 99 or 100 fields are defined with a very basic naming convention - letter for the section and 2 digit number.
 
-| Information Group | Fields| 
+| Information Group | Fields|
 |---|---|
 | Commercial transactions and parties involved | A01 to A99|
 | Description of products | B01 to B99|
@@ -16,7 +16,7 @@ In each group some fields are designated for specific information and in all gro
 
 ### Examples
 
-To illustrate the designation of sections (or fields in our understanding) some examples are given. 
+To illustrate the designation of sections (or fields in our understanding) some examples are given
 
 | No | Section designation | Contents |
 |---|---|---|
@@ -31,17 +31,18 @@ We have been studying certificates created by many market participants viewing t
 
 ## Results
 
-In our humble opinion there are a lot of issues in practice. Here we are writing up the most important ones as starting point for machine readable format. 
+In our humble opinion there are a lot of issues in practice. Here we are writing up the most important ones as starting point to design a machine readable format.
 
-### Sections 
+### Sections
 
-There are no definitions nor any guidance provided how to structure information in any section so there is no easy processing of data. OCR and modern machine learning/artifical intelligence techniques might be able to process big parts of the information available but still with a lot of failures and errors. 
+There are no definitions nor any guidance provided how to structure information in any section so there is no easy processing of data. OCR and modern machine learning/artifical intelligence techniques might be able to process big parts of the information available but still with a lot of failures and errors.
 
 Many companies provide metadata on the data by noting the section to the piece of information printed on. A simple example is
 
 [Screenshot of a section]
 
 ### Companies
+
 First prominent sections are A01, A05 and A06 which contain the manufacture, the laboratory and buyer information. Company name and address information is provided in country specific format but most important lacks a global valid identifier as e.g. the VAT ID in Europe or DUNS, which is popular in other parts of the world.
 
 ### Product Description
@@ -58,7 +59,7 @@ To describe the product there are basically four essential fields:
 The real world is basically a mess illustrated by an overview of approaches we have seen:
 
 * Product **EW Steel Pipes S355J2H EN 2019/1/2-2006** written to a combined section for B01 and B02
-* Product in B02 split into 
+* Product in B02 split into
     * Product Norm
     * Material Norm
     * Mass Norm
@@ -71,6 +72,7 @@ The real world is basically a mess illustrated by an overview of approaches we h
 * One company splits B02 into B02.1 for steel grade and B02.2 for the norm.
 
 ### Identification of the product
+
 To identify a product section B07 is designated by the norm, which describes it with
 
 *Indications for the traceability of the products, e.g. cast number, ingot number, rolling number, batch number, test number.*
@@ -78,15 +80,16 @@ To identify a product section B07 is designated by the norm, which describes it 
 In our simple understanding the section should contain the batch number of the product with which the mill certificate comes, e.g. the production batch number for some tubes. However, tracability must be ensured back to the inital cast number so in practice people developed some workarounds:
 
 * Split of B07 into B07.1, into which goes **Heat Number** and B07.2, into which goes **Specimen number**.
-* Many occurances of B07, put into context with processing step and its inspection, e.g. a batch number associated with the chemical analysis and a batch number associated with the product. We have seen up to **five** B07 on one mill certificate. 
+* Many occurances of B07, put into context with processing step and its inspection, e.g. a batch number associated with the chemical analysis and a batch number associated with the product. We have seen up to **five** B07 on one mill certificate.
 
-This is perfectly fine when looking at it from the production process and on paper. However, dealing with more than one B07 in an format to be consumed by software is getting tricky pretty fast. 
+This is perfectly fine when looking at it from the production process and on paper. However, dealing with more than one B07 in an format to be consumed by software is getting tricky pretty fast.
 
 ### Chemical Analysis
 
 Sections C71 to C99 are dedicated to the chemical analysis but leaving open which chemical element goes into which section. In practice there is a quasi industry standard on which chemical element goes into which field but still there are slight differencies between the producers.
 
 ### Processing of Mill Reports
+
 As final observation we would like to add the fact that we talked to many people which would love an electronically processable certificate - they look basically at each certificate and enter some values manually into their system. And our rough estimate on certificates in Europe only is in magnitude of 100 million annually!
 
 ## Conclusions
@@ -97,17 +100,16 @@ Based on our observations we came to the following conclusions on EN 10168:
 * It defines a somehow precise definition for a very limited set of information.
 * The industry established some common practices to provide certain information.
 * The target platform for the standard is paper which is fine as paper (and nowadays PDF) are the only means to establish document character.
-* There is a need for data in a machine readable format, confirmed by basic tools offered by some companies. 
+* There is a need for data in a machine readable format, confirmed by basic tools offered by some companies.
 
 ## Objectives
 
 Based on our observations and conclusions we set ourselves the following objectives for the design of an electronic format:
 
-* The target platform for the format are both machines and humans (in the forma of PDFs).
+* The target platform for the format are both machines and humans (in the form of PDFs).
 * The format must be developer friendly enabling easy implementation of both the creation of data in the format and reading it for further processing.
 * The format should provide standards and guidelines for many data points.
 * The format should flexible to integrate all kinds of information.
 * The format should make it easy to render great looking PDF documents following established practices.
 
 The data format in the next chapters tries to perform the balancing act to meet this to some extend contradictory objectives.
-
