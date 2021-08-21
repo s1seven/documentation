@@ -1,5 +1,5 @@
 - Introduction
-  - [Mill Certificates](mill_certificates.md)
+  - [Steel Mill Certificates](mill_certificates.md)
 
 - Quick Start
   - [Demonstration](demonstration.md)
@@ -7,9 +7,6 @@
 - EN 10168 Certificates
   - [Design Approach](design_approach.md)
   - [JSON Schema](json_schema.md)
-  - [JSON Definitions](json_definitions.md)
-
-- [Documentation](documentation.md)
 
 - [Support](support.md)
 

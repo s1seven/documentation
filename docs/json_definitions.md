@@ -211,11 +211,12 @@ The advantages of this solution is that no party are
 
 ## Key Value Elements
 
-EN 10168 implements flexibility by defining plenty of supplementary information fields to add any kind of information     
+EN 10168 implements flexibility by defining plenty of supplementary information fields to add any kind of information
 
 ### Definition of supplementary information in JSON Schema
 
     "KeyValueObject": {
+      "title": "KeyValueObject",
       "type": "object",
       "properties": {
         "Key": {
@@ -229,9 +230,21 @@ EN 10168 implements flexibility by defining plenty of supplementary information 
         },
         "Interpretation": {
           "type": "string"
+        },
+        "Type": {
+          "enum": [
+            "string",
+            "number",
+            "date",
+            "date-time",
+            "boolean"
+          ],
+          "default": "string"
         }
       },
-      "required": ["Key", "Value"],
+      "required": [
+        "Key"
+      ],
       "additionalProperties": false
     }
 
@@ -260,7 +273,8 @@ A use case is to provide information on hydrostatic tests including the test pre
         "key": "Hydrostatic test - test pressure",
         "value": "7",
         "unit": "MPa/5s",
-        "interpretation": "satisfactory"
+        "interpretation": "satisfactory",
+        "type": "number"
       }
     }
 
